@@ -73,19 +73,21 @@
 	.slides::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		appearance: none;
-		width: 25px;
-		height: 25px;
+		width: 35px;
+		height: 35px;
 		background: #4d4caf;
 		cursor: pointer;
 		border-radius: 20px;
+		border: white solid 3px;
 	}
 
 	.slides::-moz-range-thumb {
-		width: 25px;
-		height: 25px;
+		width: 35px;
+		height: 35px;
 		background: #4d4caf;
 		cursor: pointer;
 		border-radius: 20px;
+		border: white solid 3px;
 	}
 
 	@media only screen and (max-width: 1000px) {
@@ -109,15 +111,5 @@
 
 		.slides:hover {
 			opacity: 1;
-		}
-
-		.slides::-webkit-slider-thumb {
-			width: 35px;
-			height: 35px;
-		}
-
-		.slides::-moz-range-thumb {
-			width: 35px;
-			height: 35px;
 		}
 	}
