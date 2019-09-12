@@ -10,18 +10,18 @@ function calculate(gas_usage, electric_usage, gas_price, gas_standing, electric_
 	monthly = grand_total / months;
 	annual = monthly * 12;
 	result["gas_usage"] = gas_usage;
-	result["gas_kwh"] = gas_kwh;
+	result["gas_kwh"] = gas_kwh.toFixed(0);;
 	result["electric_usage"] = electric_usage;
 	result["gas_price"] = gas_price;
 	result["gas_standing"] = gas_standing;
 	result["electric_price"] = electric_price;
 	result["electric_standing"] = electric_standing;
 	result["months"] = months;
-	result["gas_total"] = gas_total;
-	result["electric_total"] = electric_total;
-	result["grand_total"] = grand_total;
-	result["per_month"] = monthly;
-	result["annual"] = annual;
+	result["gas_total"] = gas_total.toFixed(2);;
+	result["electric_total"] = electric_total.toFixed(2);;
+	result["grand_total"] = grand_total.toFixed(2);;
+	result["per_month"] = monthly.toFixed(2);;
+	result["annual"] = annual.toFixed(2);;
 }
 
 function cubic_metre_kwh(gas_usage) {

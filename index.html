@@ -2,46 +2,73 @@
 <html>
 <head>
 	<title>Energy</title>
+	<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<div class="container">
-		<div class="slidecontainer">
-			<h3>Gas Usage <span id="gas_usage"></span>m3</h3>
-			<input type="range" min="0" max="2500" value="300" step="1" class="slides" id="slider1">
+	<h1>Energy Bills calculator</h1>
+	<div class="content">
+		<div class="container">
+			<div class="slidecontainer">
+				<h3>Gas Usage <span id="gas_usage"></span>m3</h3>
+				<input type="range" min="0" max="2500" value="300" step="1" class="slides" id="slider1">
+			</div>
+			<div class="slidecontainer">
+				<h3>Gas price per kwH <span id="gas_price"></span>p</h3>
+				<input type="range" min="0" max="5" value="3" step="1" class="slides" id="slider3">
+			</div>
+			<div class="slidecontainer">
+				<h3>Gas daily standing charge <span id="gas_standing"></span>p</h3>
+				<input type="range" min="0" max="50" value="20" step="1" class="slides" id="slider4">
+			</div>
+			<div class="slidecontainer">
+				<h3>Electric Usage <span id="electric_usage"></span>kwH</h3>
+				<input type="range" min="0" max="30000" value="3000" step="1" class="slides" id="slider2">
+			</div>
+			<div class="slidecontainer">
+				<h3>Electrical price per kwH <span id="electric_price"></span>p</h3>
+				<input type="range" min="5" max="25" value="12" step="1" class="slides" id="slider5">
+			</div>
+			<div class="slidecontainer">
+				<h3>Electrical daily standing charge <span id="electric_standing"></span>p</h3>
+				<input type="range" min="0" max="50" value="20" step="1" class="slides" id="slider6">
+			</div>
+			<div class="slidecontainer">
+				<h3>Time period <span id="months"></span> months</h3>
+				<input type="range" min="0" max="60" value="12" step="1" class="slides" id="slider7">
+			</div>
 		</div>
-		<div class="slidecontainer">
-			<h3>Gas price per kwH <span id="gas_price"></span>p</h3>
-			<input type="range" min="0" max="5" value="3" step="1" class="slides" id="slider3">
+		<div class="container">
+			<table>
+				<tbody>
+					<tr>
+						<td>Gas (kwH)</td>
+						<td><span id="gas_kwh"></span></td>
+					</tr>
+					<tr>
+						<td>Gas total spend</td>
+						<td>£<span id="gas_total"></span></td>
+					</tr>
+					<tr>
+						<td>Electric total spend</td>
+						<td>£<span id="electric_total"></span></td>
+					</tr>
+					<tr>
+						<td>TOTAL</td>
+						<td>£<span id="grand_total"></span></td>
+					</tr>
+					<tr>
+						<td>Cost per month</td>
+						<td>£<span id="per_month"></span></td>
+					</tr>
+					<tr>
+						<td>Cost per year</td>
+						<td>£<span id="annual"></span></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
-		<div class="slidecontainer">
-			<h3>Gas daily standing charge <span id="gas_standing"></span>p</h3>
-			<input type="range" min="0" max="50" value="20" step="1" class="slides" id="slider4">
-		</div>
-		<div class="slidecontainer">
-			<h3>Electric Usage <span id="electric_usage"></span>kwH</h3>
-			<input type="range" min="0" max="30000" value="3000" step="1" class="slides" id="slider2">
-		</div>
-		<div class="slidecontainer">
-			<h3>Electrical price per kwH <span id="electric_price"></span>p</h3>
-			<input type="range" min="5" max="25" value="12" step="1" class="slides" id="slider5">
-		</div>
-		<div class="slidecontainer">
-			<h3>Electrical daily standing charge <span id="electric_standing"></span>p</h3>
-			<input type="range" min="0" max="50" value="20" step="1" class="slides" id="slider6">
-		</div>
-		<div class="slidecontainer">
-			<h3>Time period <span id="months"></span> months</h3>
-			<input type="range" min="0" max="60" value="12" step="1" class="slides" id="slider7">
-		</div>
-	</div>
-	<div class="container">
-		<p><span id="gas_kwh"></span> Gas kwH</p>
-		<p>£<span id="gas_total"></span> Gas total spend</p>
-		<p>£<span id="electric_total"></span> Electric total spend</p>
-		<p>£<span id="grand_total"></span> TOTAL</p>
-		<p>£<span id="per_month"></span> Cost per month</p>
-		<p>£<span id="annual"></span> Cost per year</p>
 	</div>
 </body>
 </html>
